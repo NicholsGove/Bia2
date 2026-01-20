@@ -1061,10 +1061,29 @@ function setupLoveLettersNavigation() {
     const closeLettersBtn = document.getElementById('close-letters-btn');
     
     if (loveLettersBtn) {
-        loveLettersBtn.addEventListener('click', () => {
+        // Add both click and touch events for better mobile support
+        const handleLoveLettersClick = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             transitionToScreen('love-letters-page');
             initializeLoveLetters();
-        });
+        };
+        
+        loveLettersBtn.addEventListener('click', handleLoveLettersClick);
+        loveLettersBtn.addEventListener('touchend', handleLoveLettersClick, { passive: false });
+        
+        // Add visual feedback on touch
+        loveLettersBtn.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            loveLettersBtn.style.transform = 'scale(0.95)';
+            loveLettersBtn.style.boxShadow = '0 3px 10px rgba(255, 107, 107, 0.5)';
+        }, { passive: false });
+        
+        loveLettersBtn.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            loveLettersBtn.style.transform = '';
+            loveLettersBtn.style.boxShadow = '';
+        }, { passive: false });
     }
     
     if (closeLettersBtn) {
