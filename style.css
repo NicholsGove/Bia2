@@ -1904,6 +1904,10 @@ body.clickable {
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(255, 107, 107, 0.5);
     animation: buttonPulse 2s infinite;
+    position: relative;
+    z-index: 1001;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 @keyframes buttonPulse {
@@ -1920,10 +1924,36 @@ body.clickable {
     box-shadow: 0 10px 25px rgba(255, 107, 107, 0.7);
 }
 
+.love-letters-nav-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 10px rgba(255, 107, 107, 0.5);
+}
+
+/* Touch device specific styles */
+@media (hover: none) and (pointer: coarse) {
+    .love-letters-nav-btn:hover {
+        transform: none;
+        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.5);
+    }
+    
+    .love-letters-nav-btn:active {
+        transform: scale(0.95);
+        box-shadow: 0 3px 10px rgba(255, 107, 107, 0.5);
+    }
+}
+
 /* Responsive Design for Love Letters */
 @media (max-width: 768px) {
     .love-letters-title {
         font-size: 36px;
+    }
+    
+    .love-letters-nav-btn {
+        padding: 12px 30px;
+        font-size: 16px;
+        margin: 20px auto 0;
+        min-width: 200px;
+        min-height: 50px;
     }
     
     .envelopes-grid {
@@ -1971,6 +2001,15 @@ body.clickable {
     
     .love-letters-subtitle {
         font-size: 14px;
+    }
+    
+    .love-letters-nav-btn {
+        padding: 10px 25px;
+        font-size: 14px;
+        margin: 15px auto 0;
+        min-width: 180px;
+        min-height: 45px;
+        border-radius: 25px;
     }
     
     .envelopes-grid {
