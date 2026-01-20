@@ -35,7 +35,7 @@ const noMessages = [
     "I'll listen to all your stories! 👂",
     "I'll hold your hand through everything! 🤝",
     "I'll be your biggest supporter! 💪",
-    "I'll make you feel like a princess/prince! 👑",
+    "I'll make you feel like a princess! 👑",
     "I'll never stop trying to make you smile! 😊",
     "I'll be your safe space! 🏠",
     "I'll love you unconditionally! ❤️",
@@ -863,3 +863,4 @@ window.addEventListener('beforeunload', () => {
         cancelAnimationFrame(animationFrameId);
     }
 });
+
