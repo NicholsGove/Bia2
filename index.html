@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Question 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background Container -->
+    <div id="background-container">
+        <div id="stars-container"></div>
+        <div id="shooting-stars-container"></div>
+        <div id="hearts-container"></div>
+        <div id="fireworks-container"></div>
+        <div id="balloons-container"></div>
+        <div id="petals-container"></div>
+        <div id="particles-container"></div>
+        <div id="light-rays-container"></div>
+    </div>
+
+    <!-- Sound Toggle Button -->
+    <button id="sound-toggle" class="sound-toggle" title="Toggle Sound">🔇</button>
+
+    <!-- Progress Indicator -->
+    <div id="progress-indicator" class="progress-indicator">
+        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+        <span class="progress-text" id="progress-text">0%</span>
+    </div>
+
+    <!-- Love Meter -->
+    <div id="love-meter" class="love-meter">
+        <div class="love-meter-fill" id="love-meter-fill"></div>
+        <span class="love-meter-label">💖 Love Meter</span>
+    </div>
+
+    <!-- Boot Screen -->
+    <div id="boot-screen" class="screen active">
+        <div class="boot-content">
+            <div class="boot-logo">💖</div>
+            <div class="boot-text" id="boot-text"></div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="boot-status" id="boot-status"></div>
+        </div>
+    </div>
+
+    <!-- Pixel Character Scene -->
+    <div id="character-scene" class="screen">
+        <div class="characters-container">
+            <div class="pixel-character character-1">
+                <div class="character-body">
+                    <div class="character-head">
+                        <div class="character-eyes">
+                            <div class="eye left"></div>
+                            <div class="eye right"></div>
+                        </div>
+                        <div class="character-mouth"></div>
+                    </div>
+                    <div class="character-torso"></div>
+                    <div class="character-legs">
+                        <div class="leg left"></div>
+                        <div class="leg right"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pixel-character character-2">
+                <div class="character-body">
+                    <div class="character-head">
+                        <div class="character-eyes">
+                            <div class="eye left"></div>
+                            <div class="eye right"></div>
+                        </div>
+                        <div class="character-mouth"></div>
+                    </div>
+                    <div class="character-torso"></div>
+                    <div class="character-legs">
+                        <div class="leg left"></div>
+                        <div class="leg right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- RPG Dialogue Box -->
+        <div class="dialogue-box">
+            <div class="dialogue-header">
+                <span class="dialogue-name">💕</span>
+                <div class="dialogue-indicator">▼</div>
+            </div>
+            <div class="dialogue-content">
+                <p id="dialogue-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question Page -->
+    <div id="question-page" class="screen">
+        <div class="question-container">
+            <div class="question-text">
+                Will you give me a chance to be your man,<br>
+                to grow with you and make you mine?
+            </div>
+            <div class="buttons-container">
+                <button id="yes-btn" class="proposal-btn yes-btn">YES</button>
+                <button id="no-btn" class="proposal-btn no-btn">NO</button>
+            </div>
+            <div id="no-message" class="no-message"></div>
+        </div>
+    </div>
+
+    <!-- Celebration Page -->
+    <div id="celebration-page" class="screen">
+        <div class="celebration-content">
+            <div class="celebration-hearts">💖💕💖</div>
+            <h1 class="celebration-title">You Chose YES!</h1>
+            <p class="celebration-subtitle">And I'll choose you every day 💖</p>
+            <div class="celebration-message">
+                <p>Thank you for giving me this chance.</p>
+                <p>I promise to cherish every moment with you.</p>
+                <p>Together, we'll create the most beautiful story.</p>
+            </div>
+            <div class="celebration-hearts">💕💖💕</div>
+        </div>
+        <div id="confetti-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
